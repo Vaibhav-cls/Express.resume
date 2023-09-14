@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Resume Builder</title>
+</head>
+
+<body>
+    <section class="home-pg">
+        <nav class="navbar">
+            <div class="cd-nav">
+                <div class="logo">
+                    <h2>Express.resume</h2>
+                </div>
+                <ul>
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li class="active"><a href="#htu">How to use</a></li>
+                    <li><a href="#create_resume">Build Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="landing" id="home">
+            <div class="headline">
+                <div class="left">
+                    <h3>
+                        <sup><i class="fa fa-quote-left"></i></sup>
+                        Craft Your Success Story —
+                        Create Stunning Resumes That Get Noticed!
+                        <sup><i class="fa fa-quote-right"></i></sup>
+                    </h3>
+                </div>
+                <div class="right">
+                    <h3>
+                        <sup><i class="fa fa-quote-left"></i></sup>
+                        Unlock Your Career Potential
+                        with Professional Resumes
+                        <sup><i class="fa fa-quote-right"></i></sup>
+                    </h3>
+                </div>
+            </div>
+            <div class="banners">
+                <img src="images/resume-template.jpg" alt="banner" class="ban">
+            </div>
+            <div class="cd-btn">
+                <p><a href="#create_resume">Get started!</a></p>
+            </div>
+        </div>
+    </section>
+    <section id="htu">
+        <div class="cd-card">
+            <div class="card">
+                <img src="" alt="">
+            </div>
+            <div class="card">
+
+            </div>
+        </div>
+    </section>
+    <section id="create_resume">
+        <div class="cd-form">
+            <div class="container">
+                <h1>Enter Your Details</h1>
+                <form id="resumeForm" method="GET" action="generated_resume.html">
+                    <label for="names">Name:</label>
+                    <input id="names" type="text" name="name" required>
+                    <label for="desig">Designation for which you are applying:</label>
+                    <input id="desig" type="text" name="designation" required>
+                    <label for="obj">Objective:</label>
+                    <input id="obj" type="text" name="objective" required>
+                    <label for="em">Email:</label>
+                    <input id="em" type="text" name="email" required>
+                    <label for="loc">Location(City, State)</label>
+                    <input id="loc" type="text" name="location" required>
+                    <label for="gith">Github link:</label>
+                    <input id="gith" type="text" name="git" required>
+                    <label for="pho">Phone:</label>
+                    <input id="pho" type="text" name="phone" required>
+                    <label for="link">Link of your linkedin id:</label>
+                    <input id="link" type="text" name="linkedin" required>
+                    <div id="exp">
+                        <label for="exp">Experience (Internship / Job):</label>
+                        <textarea id="exp" name="experience-1" rows="5"
+                            placeholder="Company Name&nbsp;&#10;Designation&nbsp;&#10;Achievements"></textarea>
+                    </div>
+                    <div onclick="addExp()" class="add-btn">Add more experience</div>
+                    <label for="edu1">Education (Degree and field of study):</label>
+                    <input id="edu1" type="text" name="education_1" required>
+                    <label for="edu2">University name:</label>
+                    <input id="edu2" type="text" name="education_2" required>
+                    <label for="skil">Skills (Enter each skill on a new line):</label>
+                    <textarea id="skil" class="skill" rows="4" name="skills"
+                        required></textarea>
+                    <label for="certif">Certificates (Enter each certification in a new line):</label>
+                    <textarea id="certif" class="certi" rows="4" name="certificates"
+                        required></textarea>
+                    <label for="projs">Personal Projects (Enter each project name and it's description in a new
+                        line):</label>
+                    <textarea id="projs" class="pro" rows="4" name="projects"
+                        required></textarea>
+                    <button type="submit">Generate Resume</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
