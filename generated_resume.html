@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Generated Resume</title>
+</head>
+
+<body>
+
+    <div class="resume">
+        <div class="header">
+            <h1 id="name">Your Name</h1>
+            <h4 id="designation">Your Designation / Work Profession</h4>
+        </div>
+        <div class="objective">
+            <p id="objective">Objective: Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum aliquam nesciunt
+                adipisci
+                pariatur,
+                cumque incidunt officiis tempore aspernatur nisi neque enim quam animi asperiores, quaerat vitae
+                animi quidem similique consectetur, quas ipsum voluptates non dolorum libero.
+            </p>
+        </div>
+        <div class="contacts">
+            <div class="li-card">
+                <ul>
+                    <li><i class="material-icons">mail</i>
+                        <p id="mail">samplemail@domain.com</p>
+                    </li>
+                    <li><i class="material-icons">location_on</i>
+                        <p id="location">City , State</p>
+                    </li>
+                    <li><i class="fa fa-github"></i>
+                        <p id="github">link to your github repository</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="li-card">
+                <ul>
+                    <li><i class="material-icons">smartphone</i>
+                        <p id="call">Your Contact number</p>
+                    </li>
+                    <li><i class="fa fa-linkedin"></i>
+                        <p id="linked">Your LinkedIn profile link</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="cd-main">
+            <div class="left-side">
+                <div class="work-exp" id="wk">
+                    <div class="head">
+                        <div class="logo"><i class="fa fa-briefcase"></i></div>
+                        <h4>WORK EXPERIENCE</h4>
+                    </div>
+                </div>
+                <div class="education">
+                    <div class="edu">
+                        <div class="logo">
+                            <i class="fa fa-graduation-cap"></i>
+                        </div>
+                        <h3>EDUCATION</h3>
+                    </div>
+                    <h4 id="education_degree">Degree and field of study</h4>
+                    <p id="university">University name</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="skills">
+                    <div class="head">
+                        <div class="logo">
+                            <i class="material-icons" style="font-size: 20px;padding: 5px;">psychology</i>
+                        </div>
+                        <div class="text">
+                            <h3>SKILLS</h3>
+                        </div>
+                    </div>
+                    <div class="container" id="skill">
+                    </div>
+                </div>
+                <div class="certificates" id="certificate">
+                    <div class="head">
+                        <div class="logo">
+                            <i class="material-icons">card_membership</i>
+                        </div>
+                        <div class="text">
+                            <h3>CERTIFICATES</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects">
+                    <div class="head">
+                        <div class="logo">
+                            <i class="material-icons">architecture</i>
+                        </div>
+                        <div class="text">
+                            <h3>PERSONAL PROJECTS</h3>
+                        </div>
+                    </div>
+                    <ul id="projectList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="prt-btn">
+        <button onclick="print()" class="no-print">Print Resume</button>
+    </div>
+    <script src="scriptt.js"></script>
+</body>
+
+</html>

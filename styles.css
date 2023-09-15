@@ -407,7 +407,7 @@ textarea::placeholder {
     #htu button {
         font-size: 3rem;
         opacity: 1;
-        padding: 0.3rem;
+        padding: 0 0.3rem;
         text-align: center;
     }
     .cd-form {
