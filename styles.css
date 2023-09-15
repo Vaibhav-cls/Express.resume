@@ -332,7 +332,7 @@ textarea::placeholder {
 
 @media screen and (max-width: 414px) {
     .navbar{
-        padding: 20px 0px;
+        padding: 10px 0px;
     }
     .navbar .cd-nav {
         padding: 10px;
@@ -374,7 +374,7 @@ textarea::placeholder {
     }    
 
     .landing .banners img {
-        height: 496px;
+        height: 450px;
         margin:0 auto;
         margin-bottom: 20px;
     }
@@ -395,12 +395,20 @@ textarea::placeholder {
     }
     #htu {
         height: 905px;
+        background-attachment: scroll;
     }
     .carousel {
         height: 85%;
     }
+    .carousel img {
+        transition: all 0.5s ease;
+        background-attachment: scroll;
+    }
     #htu button {
-        font-size: 2rem;
+        font-size: 3rem;
+        opacity: 1;
+        padding: 0.3rem;
+        text-align: center;
     }
     .cd-form {
         width: 96%;
