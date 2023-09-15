@@ -18,6 +18,11 @@ body {
 
 .navbar .cd-nav .logo h2 {
     font-size: 22px;
+    background-color: #ff0000;
+    background-image: linear-gradient(315deg, #ff0000 0%, #c09300 ,rgba(0, 0, 0, 0.5)70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .navbar .cd-nav ul {
@@ -32,6 +37,32 @@ body {
 .navbar .cd-nav ul li a {
     text-decoration: none;
     color: black;
+    position: relative;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    padding-bottom: 0px;
+}
+.navbar .cd-nav ul li a::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3.4px;
+    opacity: 0;
+    background-color: red;
+    bottom: -7px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+.navbar .cd-nav ul li a:hover::after{
+    bottom: -2px;
+    opacity: 1;
+}
+.navbar .cd-nav ul li a:hover{
+    background-image: linear-gradient(315deg, #ff0000 0%, #c09300 ,rgba(0, 0, 0, 0.671)70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;    
 }
 
 .landing {
@@ -113,6 +144,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow:inset  rgba(58, 40, 0, 0.671) 3px 3px 8px;
     /* background: hsla(177, 87%, 79%, 1);
     background: linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);   
     background: -moz-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);   
