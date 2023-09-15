@@ -183,11 +183,11 @@ body {
     padding: 20px 0px;
     background: hsla(311, 74%, 87%, 1);
 
-background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
 
-background: -moz-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
 
-background: -webkit-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
 
 }
 
@@ -328,6 +328,107 @@ textarea::placeholder {
     .no-print {
         display: none !important;
     }
+}
+
+@media screen and (max-width: 414px) {
+    .navbar{
+        padding: 20px 0px;
+    }
+    .navbar .cd-nav {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .navbar .cd-nav .logo h2 {
+        font-size: 18px;
+    }
+
+    .navbar .cd-nav ul li {
+        margin-left: 15px;
+    }
+
+    .navbar .cd-nav ul li a {
+        font-size: 10px;
+    }
+
+    .landing {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .landing .headline {
+        margin-right: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .landing .headline .right,
+    .landing .headline .left {
+        width: 60%;
+        margin-bottom: 50px;
+    }
+    .landing .headline h3 {
+        font-size: 15px;
+    }    
+
+    .landing .banners img {
+        height: 496px;
+        margin:0 auto;
+        margin-bottom: 20px;
+    }
+    .landing .cd-btn {
+        position:static;
+        margin-top: 10px;
+        border: 1px solid;
+        text-align: center;
+    }
+    .landing .cd-btn p {
+        padding: 4px;
+    }
+    .landing .cd-btn p a {
+        font-size: 10px;
+    }
+    .home-pg {
+        height: 905px;
+    }
+    #htu {
+        height: 905px;
+    }
+    .carousel {
+        height: 85%;
+    }
+    #htu button {
+        font-size: 2rem;
+    }
+    .cd-form {
+        width: 96%;
+    }
+    .container  h1 {
+        font-size: 20px;
+    }
+    label {
+        font-size: 15px;
+    }
+    input[type="text"] {
+        font-size: 13px;
+    }
+    form button {
+        font-size: 12px;
+    }
+    textarea {
+        border: 1px solid #045e59;
+    }
+    textarea::placeholder {
+        font-size: 12px;
+        text-align: justify;
+    }
+    .add-btn {
+        padding: 8px 0px;
+        width: 100%;
+        font-size: 13px;
+    }    
 }
 
 .resume .header {
