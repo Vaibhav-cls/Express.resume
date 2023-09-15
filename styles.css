@@ -102,21 +102,95 @@ body {
             hsl(263deg 99% 87%) 83%,
             hsl(281deg 91% 86%) 100%);
 }
-#htu{
+
+#htu {
+    background: hsla(265, 53%, 29%, 1);
+    background: linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, hsla(24, 93%, 73%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, hsla(24, 93%, 73%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(265, 53%, 29%, 1) 0%, hsla(24, 93%, 73%, 1) 100%);
     height: 100vh;
-    background: hsla(177, 87%, 79%, 1);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: hsla(177, 87%, 79%, 1);
     background: linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);   
     background: -moz-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);   
-    background: -webkit-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%); */
 }
-#create_resume{
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    background-clip: border-box;
+    background-size: 200px;
+    position: relative;
+    width: 100%;
+    height: 94%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.carousel img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background-attachment: fixed;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+#htu button {
+    margin-top: 10px;
+    position: absolute;
+    z-index: 10;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: rgb(224, 217, 217);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0 0.3rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#htu button:hover,
+#htu button:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#htu button:focus {
+    outline: 1px solid black;
+}
+
+#htu .prev {
+    left: 1rem;
+}
+
+#htu .next {
+    right: 1rem;
+}
+
+
+#create_resume {
     padding: 20px 0px;
-    background: hsla(177, 87%, 79%, 1);
-    background: linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);   
-    background: -moz-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);   
-    background: -webkit-linear-gradient(90deg, hsla(177, 87%, 79%, 1) 0%, hsla(235, 89%, 70%, 1) 100%);
-    
+    background: hsla(311, 74%, 87%, 1);
+
+background: linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(311, 74%, 87%, 1) 0%, hsla(275, 19%, 88%, 1) 100%);
+
 }
+
 .cd-form {
     width: 60%;
     border-radius: 20px;
@@ -168,7 +242,8 @@ form button {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-form button:hover{
+
+form button:hover {
     background: none;
     color: rgb(255, 255, 255);
     background: linear-gradient(135deg, rgb(121, 241, 164) 10%, rgb(14, 92, 173) 100%);
@@ -178,7 +253,8 @@ form button:hover{
     font-weight: 540;
     margin-bottom: 10px;
 }
-textarea{
+
+textarea {
     border-radius: 5px;
     padding: 10px;
     resize: none;
@@ -187,11 +263,13 @@ textarea{
     outline-color: blueviolet;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-textarea::placeholder{
+
+textarea::placeholder {
     font-size: 15px;
-    text-align:justify;
+    text-align: justify;
 }
-.add-btn{
+
+.add-btn {
     padding: 10px 0px;
     width: 30%;
     text-align: center;
@@ -201,18 +279,20 @@ textarea::placeholder{
     border: 1px solid rgb(184, 93, 8);
     font-weight: 700;
     margin-bottom: 20px;
-    background: linear-gradient(140deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bdf);
+    background: linear-gradient(140deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bdf);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
-.add-btn:hover{
+
+.add-btn:hover {
     background: none;
     color: rgb(255, 255, 255);
-    background: linear-gradient(140deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bdf);
+    background: linear-gradient(140deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bdf);
 }
+
 .resume {
     background-color: white;
     width: 793.7px;
@@ -221,7 +301,8 @@ textarea::placeholder{
     margin: 0px auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.no-print{
+
+.no-print {
     display: block;
     width: 100%;
     padding: 10px;
@@ -236,16 +317,19 @@ textarea::placeholder{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-.no-print:hover{
+
+.no-print:hover {
     background: none;
     color: rgb(255, 255, 255);
     background: linear-gradient(135deg, rgb(121, 241, 164) 10%, rgb(14, 92, 173) 100%);
 }
+
 @media print {
     .no-print {
         display: none !important;
     }
 }
+
 .resume .header {
     padding: 20px 0px 5px 35px;
 }
@@ -363,9 +447,11 @@ textarea::placeholder{
     font-weight: 500;
     font-size: 15px;
 }
-.resume .cd-main .left-side{
+
+.resume .cd-main .left-side {
     width: 100%;
 }
+
 .resume .cd-main .right-side {
     width: 70%;
     margin: 0px 10px;

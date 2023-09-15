@@ -20,47 +20,79 @@ function addExp(){
     newElement.placeholder = "Company Name\nDesignation\nAchievements";
     parent.appendChild(newElement);
 }
-
 /*
+const buttons = document.querySelector("[data-carousel-button]");
+buttons.forEach( button => {
+    button.addEventListener("click",()=>{
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+        const slides = button
+        .closest("[data-carousel]")
+        .querySelector("[data-slides]");
 
-function generateResume() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("address").value;
-    const summary = document.getElementById("summary").value;
-    const experience = document.getElementById("experience").value;
+        const activeSlide = slides.querySelector("[data-active]");
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+        if(newIndex < 0) newIndex = slides.children.length -1;
+        if(newIndex >= slides.children.length) newIndex = 0;
 
-    const resume = `
-        <h2>${name}</h2>
-        <p>Email: ${email}</p>
-        <p>Phone: ${phone}</p>
-        <p>Address: ${address}</p>
-        <h3>Summary</h3>
-        <p>${summary}</p>
-        <h3>Experience</h3>
-        <p>${experience}</p>
-    `;
+        slides.children[newIndex].dataset.active =true;
+        delete activeSlide.dataset.active;
+    })
+})*/
 
-    document.getElementById("generatedResume").innerHTML = resume;
-}*/
+const carousel = document.querySelector('.carousel');
+const images = carousel.querySelectorAll('img');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+let autoSlideInterval;
 
-function printResume() {
-    const resumeContent = document.getElementById("generatedResume").innerHTML;
-    const printWindow = window.open('', '', 'width=600,height=600');
-    printWindow.document.open();
-    printWindow.document.write('<html><head><title>Print Resume</title></head><body>');
-    printWindow.document.write(resumeContent);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
+// Function to show the next slide
+function showNextSlide() {
+    showSlide(currentIndex + 1);
 }
-const experienceEntries = document.querySelectorAll(".experienceEntry");
-const experiences = [];
-experienceEntries.forEach(entry => {
-    const companyName = entry.querySelector(".companyName").value;
-    const designation = entry.querySelector(".designation").value;
-    const keyFeaturesText = entry.querySelector(".keyFeatures").value;
-    const keyFeaturesList = keyFeaturesText.split('\n').filter(feature => feature.trim() !== '');
-    experiences.push({ companyName, designation, keyFeatures: keyFeaturesList });
+
+// Function to show the previous slide
+function showPrevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// Function to start the auto-slide interval
+function startAutoSlide() {
+    stopAutoSlide(); // Stop previous interval (if any)
+    autoSlideInterval = setInterval(showNextSlide, 3000); // Auto-slide every 3 seconds (adjust as needed)
+}
+
+// Function to stop the auto-slide interval
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+prevBtn.addEventListener('mousedown', () => {
+    showPrevSlide();
+    stopAutoSlide(); // Stop auto-slide when user presses the previous button
 });
+
+nextBtn.addEventListener('mousedown', () => {
+    showNextSlide();
+    stopAutoSlide(); // Stop auto-slide when user presses the next button
+});
+
+prevBtn.addEventListener('mouseup', startAutoSlide);
+nextBtn.addEventListener('mouseup', startAutoSlide);
+
+function showSlide(index) {
+    if (index < 0) {
+        index = images.length - 1;
+    } else if (index >= images.length) {
+        index = 0;
+    }
+
+    images[currentIndex].classList.remove('active');
+    images[index].classList.add('active');
+
+    currentIndex = index;
+}
+
+// Start auto-slide when the page loads
+startAutoSlide();
+
