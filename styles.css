@@ -324,7 +324,23 @@ textarea::placeholder {
     color: rgb(255, 255, 255);
     background: linear-gradient(140deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bdf);
 }
-
+footer{
+    background-color: #000b14;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+}
+footer .right-side{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+footer .right-side img{
+    width: 50px;
+    margin-left: 20px;
+}
 .resume {
     background-color: white;
     width: 793.7px;
@@ -469,6 +485,13 @@ textarea::placeholder {
         width: 100%;
         font-size: 13px;
     }    
+    footer p{
+        font-size: 12px;
+    }
+    footer .right-side img{
+        width: 20px;
+        margin-left: 10px;
+    }
 }
 
 .resume .header {
