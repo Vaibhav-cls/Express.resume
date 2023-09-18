@@ -356,8 +356,12 @@ footer .right-side{
     align-items: center;
 }
 footer .right-side img{
-    width: 50px;
+    width: 35px;
     margin-left: 20px;
+    transition: all 0.5s ease-in-out;
+}
+footer .right-side img:hover {
+    transform: rotate(360deg);
 }
 .resume {
     background-color: white;
